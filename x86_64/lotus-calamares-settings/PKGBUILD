@@ -1,0 +1,20 @@
+# Maintainer:SuiliuS <suilius@tutanota.com>
+pkgname=lotus-calamares-config
+_destname1="/etc"
+pkgver=1
+pkgrel=01
+pkgdesc="calamares for LOTUS-OS"
+arch=('any')
+url="https://github.com/Suilius"
+license=('MIT')
+makedepends=('git')
+depends=()
+conflicts=('')
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
+}

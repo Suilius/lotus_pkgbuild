@@ -1,21 +1,16 @@
 # Maintainer: SuiliuS suilius@tutanota.com
 
-pkgname=('calamares'
-	'calamares-qt5')
+#pkgname=('calamares'
+#	'calamares-qt5')
+pkgname=calamares
 
 pkgver=3.3.8
 pkgrel=1
 pkgdesc='Distribution-independent installer framework'
-arch=($CARCH)
+arch=('x86_64')
 url="https://github.com/calamares/calamares"
 
-license=('BSD-2-Clause'
-	'CC-BY-4.0'
-	'CC0-1.0'
-	'GPL-3.0-or-later'
-	'LGPL-2.1-only'
-	'LGPL-3.0-or-later'
-	'MIT')
+license=('MIT')
 
 depends=('ckbcomp'
 	'efibootmgr'
@@ -42,12 +37,14 @@ source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz"
 	"paru-support.patch"
 	"flag.patch")
 
+#sha256sums=('SKIP')
+
 sha256sums=('523a0e4cfefbe471d9a6a5d874018fe282a4ce3667ff560bd97190339be6b592'
-            'b9e65ab87f69b2d3f8f8eaea60c78625aef57dd336314ab75389f31a447445be'
-            'c176b28007bd1c1f23d8dbb2c936fa54d0c01bacfb67290ddad597606c129df3'
-            '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176'
-            'f00c90bd87d6dfd73b3ec53fa9a145ac25234676be41604807f05f05a4bf5bbb'
-            '0830c8fe57c94a63ef87b6a025eb729b4f098a9e46e729b63415f4d3a2755762')
+            '46b28447755512d16566fdabd8f75619fceba4bcccead4af7cb6356d0383c7fb'
+            'a76b3a597ee031a00008707ae9e31122e48f3d2eeaa96318a5d924b8ec5d7843'
+            '5b1b5bf81d850c30486dcbe461a9ec2ca3afc15e9df1845d0529949dd6436763'
+            '0d5e651df84ed16a8801743cc24e69e265d18d2ad1b834847bd7ee55a17192e0'
+            '1fb2e34b44e3f2c6bfa37d773b7c077f3355b8a0f21688ba37ec7ab2bdc0a526')
 
 prepare() {
 	makedepends() {
